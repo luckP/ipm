@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"innerRadius": "40%",
+					"minRadius": 0,
+					"colors": [
+						"#2980b9",
+						"#e74c3c",
+						"#2ecc71",
+						"#f1c40f",
+						"#34495e",
+						"#23B4AE",
+						"#2D2833",
+						"#EDEDED"
+					],
+					"gradientRatio": [],
+					"marginBottom": 0,
+					"marginTop": 0,
+					"outlineThickness": 0,
+					"titleField": "category",
+					"valueField": "column-1",
+					"fontSize": 12,
+					"theme": "dark"
+					"balloon": {},
+					"dataProvider": [
+						{
+							"category": "Estado 1",
+							"column-1": 8
+						},
+						{
+							"category": "Estado2",
+							"column-1": 6
+						},
+						{
+							"category": "Estado3",
+							"column-1": 2
+						},
+						{
+							"category": "Estado4",
+							"column-1": "6"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>

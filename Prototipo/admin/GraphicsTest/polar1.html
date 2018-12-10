@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>polar | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https:http://cdn.amcharts.com/lib/3/radar.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "radar",
+					"categoryField": "parameter",
+					"colors": [
+						"#2ecc71",
+						"#f1c40f",
+						"#34495e",
+						"#23B4AE",
+						"#2D2833",
+						"#EDEDED",
+						"#2980b9",
+						"#e74c3c"
+					],
+					"startDuration": 2,
+					"fontSize": 13,
+					"theme": "dark",
+					"graphs": [
+						{
+							"balloonText": "[[value]] litres of beer per year",
+							"bullet": "round",
+							"bulletSize": 9,
+							"id": "AmGraph-1",
+							"lineAlpha": 1,
+							"lineThickness": 2,
+							"valueField": "litres"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisTitleOffset": 20,
+							"gridType": "circles",
+							"id": "ValueAxis-1",
+							"minimum": 0,
+							"axisAlpha": 0.54,
+							"gridAlpha": 0.51
+						},
+						{
+							"id": "ValueAxis-2"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"litres": "300",
+							"parameter": "Portugal"
+						},
+						{
+							"litres": 131.1,
+							"parameter": ">30"
+						},
+						{
+							"litres": 115.8,
+							"parameter": "Female"
+						},
+						{
+							"litres": 109.9,
+							"parameter": "~Portugal"
+						},
+						{
+							"litres": 108.3,
+							"parameter": "<30"
+						},
+						{
+							"litres": 99,
+							"parameter": "Male"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>

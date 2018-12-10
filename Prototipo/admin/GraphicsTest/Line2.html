@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "date",
+					"dataDateFormat": "YYYY-MM-DD HH:NN",
+					"colors": [
+						"#2980b9",
+						"#e74c3c",
+						"#2ecc71",
+						"#f1c40f",
+						"#34495e",
+						"#23B4AE",
+						"#2D2833",
+						"#EDEDED"
+					],
+					"theme": "dark",
+					"categoryAxis": {
+						"minPeriod": "mm",
+						"parseDates": true
+					},
+					"chartCursor": {
+						"enabled": true,
+						"categoryBalloonDateFormat": "JJ:NN"
+					},
+					"chartScrollbar": {
+						"enabled": true
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"bullet": "round",
+							"bulletHitAreaSize": 2,
+							"id": "Line-Blue",
+							"markerType": "circle",
+							"maxBulletSize": 47,
+							"title": "graph 11",
+							"valueField": "column-1"
+						},
+						{
+							"bullet": "round",
+							"id": "Line-Red",
+							"markerType": "circle",
+							"title": "graph 12",
+							"valueField": "column-2"
+						},
+						{
+							"bullet": "round",
+							"id": "Line-Green",
+							"markerType": "circle",
+							"title": "graph 13",
+							"valueField": "column-3"
+						},
+						{
+							"bullet": "round",
+							"id": "Line-Yellow",
+							"markerType": "circle",
+							"title": "graph 14",
+							"valueField": "column-4"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Axis title"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 15,
+							"text": "Chart Title"
+						}
+					],
+					"dataProvider": [
+						{
+							"date": "2014-03-01 07:57",
+							"column-1": 62,
+							"column-2": 27,
+							"column-3": 93,
+							"column-4": 95
+						},
+						{
+							"date": "2014-03-01 07:58",
+							"column-1": 27,
+							"column-2": 84,
+							"column-3": 99,
+							"column-4": 27
+						},
+						{
+							"date": "2014-03-01 07:59",
+							"column-1": 49,
+							"column-2": 14,
+							"column-3": 74,
+							"column-4": 63
+						},
+						{
+							"date": "2014-03-01 08:00",
+							"column-1": 67,
+							"column-2": 83,
+							"column-3": 36,
+							"column-4": 43
+						},
+						{
+							"date": "2014-03-01 08:01",
+							"column-1": 45,
+							"column-2": 23,
+							"column-3": 15,
+							"column-4": 98
+						},
+						{
+							"date": "2014-03-01 08:02",
+							"column-1": 79,
+							"column-2": 33,
+							"column-3": 14,
+							"column-4": 60
+						},
+						{
+							"date": "2014-03-01 08:03",
+							"column-1": 52,
+							"column-2": 14,
+							"column-3": 60,
+							"column-4": 72
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>

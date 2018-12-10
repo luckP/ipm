@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<script>
+var dd=1, mm=1, yy=2015;
+
+function date(i){
+	dd++;
+	if(dd>28){
+		dd=1;
+		mm++;
+	}
+	if(mm>12){
+		mm=1;
+		yy++;
+	}
+
+var d = "\"";
+	d+=yy;
+	d+='-';
+	d+=(mm>9)?mm:'0'+mm;
+	d+='-';
+	d+=(dd>9)?dd:'0'+dd;
+	d+="\"";
+	return d;
+
+
+
+	// var yyyy = 2016;
+	// var mm = 1;
+	// var dd = 1;
+	// var hh = 1;
+	// var min = 1;
+
+	// var d = "\"";
+	// dd=parseInt((dd+i>28)?i%28+1:i);
+	// mm=parseInt((mm+(i/28)>12)?(i/28)%12+1:i);
+	// yy=parseInt((i/(28*12)));
+
+	// // min=(i>59)?i%60:i;
+	// // hh=parseInt((i/60>23)?i/30%24:i/60);
+	// // dd=parseInt((i/(60*24)>28)?i/(30*24)%28:i/(60*24));
+	// // mm=parseInt((i/(60*24*12)>11)?i/(60*24*12)%12:i/(60*24*12));
+	// // yyyy += parseInt(i/(60*24*12));
+	// d+=yyyy;
+	// d+='-';
+	// d+=(mm>9)?mm:'0'+mm;
+	// d+='-';
+	// d+=(dd>9)?dd:'0'+dd;
+	// // d+=' ';
+	// // d+=(hh>9)?hh:'0'+hh;
+	// // d+=':';
+	// // d+=(min>9)?min:'0'+min;
+	// d+="\"";
+	return d;
+}
+
+function teste(){
+
+
+
+
+
+var data = "dataProvider\= [";
+var lonLest=-8.89;
+var latSul=37.17;
+
+var lonOes=-6.54 ;
+var latNor=41.83;
+var dateTime = date(0);
+for (var i = 0; i < 1000; i++) {
+	var userId = parseInt(Math.random() * (1000 - 1) + 1);
+	dateTime = (parseInt(Math.random() * 10) == 0) ?date(i) : dateTime;
+	var long = Math.random() * (lonLest - lonOes) + lonOes;
+	var lati = Math.random() * (latNor - latSul) + latSul;
+	var state = parseInt(Math.random() * 30);
+
+	if(state<10) state=0;
+	else if(state>=10 && state<15) state=1;
+	else if(state>=15&&state<25) state=2;
+	else state=3;
+
+	var companyCategory = parseInt(Math.random()*10);
+
+	var world =  parseInt(Math.random() * 10);
+	switch (world){
+		case 0:
+			world = "\"eletrico\"";
+		break;
+		case 1:
+			world = "\"incendio\"";
+		break;
+		case 2:
+			world = "\"fogo\"";
+		break;
+		case 3:
+			world = "\"luz\"";
+		break;
+		case 4:
+			world = "\"agua\"";
+		break;
+		case 5:
+			world = "\"juros\"";
+		break;
+		case 6:
+			world = "\"cano\"";
+		break;
+		case 7:
+			world = "\"alagamento\"";
+		break;
+		case 8:
+			world = "\"fumassa\"";
+		break;
+			world = "\"gelo\"";
+		case 9:
+			world = "\"seguranca\"";
+		break;
+		default :
+			world = "\"telefone\"";
+		break;
+	}
+
+	var company =  parseInt(Math.random() * 10);
+	switch (company){
+		case 0:
+			company = "\"banco nacional ultramarino\"";
+		break;
+		case 1:
+			company = "\"vodafone\"";
+		break;
+		case 2:
+			company = "\"meo\"";
+		break;
+		case 3:
+			company = "\"portugal telecom\"";
+		break;
+		case 4:
+			company = "\"edp\"";
+		break;
+		case 5:
+			company = "\"aguas de portugal\"";
+		break;
+		case 6:
+			company = "\"bombeiro\"";
+		break;
+		case 7:
+			company = "\"stcp\"";
+		break;
+		case 8:
+			company = "\"comboios\"";
+		break;
+		default :
+			company = "\"banco\"";
+		break;
+	}
+
+	var userInfo1 = parseInt(Math.random() * 5)+1;
+	var userInfo2 = parseInt(Math.random() * 5)+1;
+	var userInfo3 = parseInt(Math.random() * 5)+1;
+	var userInfo4 = parseInt(Math.random() * 5)+1;
+	var userInfo5 = parseInt(Math.random() * 5)+1;
+	var userInfo6 = parseInt(Math.random() * 5)+1;
+
+	var averageResponseTime = (Math.random() * 60);
+	var score = parseInt(Math.random() * 50);
+
+	if(score<10) score=1;
+	else if(score>=15 && score<35) score=2;
+	else if(score>=35&&score<40) score=3;
+	else if(score>=40&&score<42) score=4;
+	else score=5;
+
+	data+="{\n";
+	data+="\"userId\": "+userId+",\n";
+	data+="\"state\": "+state+",\n";
+	data+="\"world\": "+world+",\n";
+	data+="\"id\": \""+i+"\",\n";
+	data+="\"longitude\": "+long+",\n";
+	data+="\"latitude\": "+lati+",\n";
+	data+="\"companyName\": "+company+",\n";
+	data+= "\"companyCategory\": "+companyCategory+",\n";
+	data+="\"date\": "+dateTime+",\n";
+	data+="\"userInfo1\": "+userInfo1+ ",\n";
+	data+="\"userInfo2\": "+userInfo2+",\n";
+	data+="\"userInfo3\": "+userInfo3+",\n";
+	data+="\"userInfo4\": "+userInfo4+",\n";
+	data+="\"userInfo5\": "+userInfo5+",\n";
+	data+="\"userInfo6\": "+userInfo6+",\n";
+	data+="\"averageresponseTime\": "+averageResponseTime+","+"\n";
+	data+="\"score\": "+score+"\n";
+
+	data+="},\n";
+}
+data = data.substring(0, data.length - 2);
+
+data+="\n]";
+
+document.getElementById('text').innerHTML = data;
+
+}
+</script>
+</head>
+<body>
+<textarea id='text'>
+
+</textarea>
+<button onclick="teste()">teste</button>
+</body>
+</html>
+
+
+
+
+
+
+

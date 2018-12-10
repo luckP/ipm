@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/gauge.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "gauge",
+					"faceBorderWidth": 0,
+					"faceColor": "#555555",
+					"marginBottom": 5,
+					"marginLeft": 5,
+					"marginRight": 5,
+					"marginTop": 5,
+					"color": "#FFFFFF00",
+					"fontFamily": "Arial",
+					"fontSize": 13,
+					"handDrawThickness": 15,
+					"percentPrecision": 0,
+					"precision": 0,
+					"prefixesOfBigNumbers": [
+						{
+							"number": 1000,
+							"prefix": "k"
+						},
+						{
+							"number": 1000000,
+							"prefix": "M"
+						},
+						{
+							"number": 1000000000,
+							"prefix": "G"
+						},
+						{
+							"number": 1000000000000,
+							"prefix": "T"
+						},
+						{
+							"number": 1000000000000000,
+							"prefix": "P"
+						},
+						{
+							"number": 1000000000000000000,
+							"prefix": "E"
+						},
+						{
+							"number": 1e+21,
+							"prefix": "Z"
+						},
+						{
+							"number": 1e+24,
+							"prefix": "Y"
+						}
+					],
+					"prefixesOfSmallNumbers": [
+						{
+							"number": 1e-24,
+							"prefix": "y"
+						},
+						{
+							"number": 1e-21,
+							"prefix": "z"
+						},
+						{
+							"number": 1e-18,
+							"prefix": "a"
+						},
+						{
+							"number": 1e-15,
+							"prefix": "f"
+						},
+						{
+							"number": 1e-12,
+							"prefix": "p"
+						},
+						{
+							"number": 1e-9,
+							"prefix": "n"
+						},
+						{
+							"number": 0.000001,
+							"prefix": "μ"
+						},
+						{
+							"number": 0.001,
+							"prefix": "m"
+						}
+					],
+					"theme": "dark",
+					"arrows": [
+						{
+							"alpha": 0.79,
+							"borderAlpha": 0,
+							"id": "GaugeArrow-1",
+							"nailBorderThickness": 10,
+							"radius": "82%",
+							"startWidth": 11,
+							"value": 50
+						}
+					],
+					"axes": [
+						{
+							"axisThickness": 1,
+							"bottomText": "0 km/h",
+							"bottomTextYOffset": -20,
+							"endValue": 220,
+							"id": "GaugeAxis-1",
+							"valueInterval": 10,
+							"bands": [
+								{
+									"alpha": 1,
+									"color": "#00CC00",
+									"endValue": 90,
+									"id": "GaugeBand-1",
+									"innerRadius": 75,
+									"startValue": 0
+								},
+								{
+									"color": "#FFAC29",
+									"endValue": 130,
+									"id": "GaugeBand-2",
+									"innerRadius": 75,
+									"startValue": 90
+								},
+								{
+									"alpha": 1,
+									"color": "#E74C3C",
+									"endValue": 220,
+									"id": "GaugeBand-3",
+									"innerRadius": 75,
+									"radius": "100%",
+									"startValue": 130
+								}
+							]
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [
+						{
+							"color": "#FFFFFF",
+							"id": "Title-1",
+							"size": 19,
+							"tabIndex": 0,
+							"text": "User satisfaction"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>
